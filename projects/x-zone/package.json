@@ -1,0 +1,36 @@
+{
+  "name": "tailwind",
+  "version": "1.0.0",
+  "description": "Tailwind Kit",
+  "main": "gulpfile.js",
+  "paths": {
+    "src": {
+      "css": "./src/css/",
+      "assets": "./src/assets/"
+    },
+    "dist": {
+      "base": "",
+      "css": "./dist/css/",
+      "assets": "./dist/assets/"
+    },
+    "config": {
+      "tailwind": "./tailwind.js"
+    }
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Javed",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^9.4.6",
+    "browser-sync": "^2.26.3",
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^4.0.0",
+    "gulp-imagemin": "^5.0.3",
+    "gulp-postcss": "^8.0.0",
+    "gulp-purgecss": "^1.1.1",
+    "gulp-rename": "^1.4.0",
+    "tailwindcss": "^0.7.3"
+  }
+}
