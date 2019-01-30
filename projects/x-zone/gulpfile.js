@@ -9,6 +9,7 @@ const browserSync = require("browser-sync").create();
 const rename = require("gulp-rename");
 const cleanCSS = require('gulp-clean-css');
 const imagemin = require('gulp-imagemin');
+const atImport = require('postcss-import');
 // Custom extractor for purgeCSS, to avoid stripping classes with `:` prefixes
 class TailwindExtractor {
   static extract(content) {
@@ -21,7 +22,7 @@ gulp.task("css", () => {
   return gulp
     .src(paths.src.css + "*.css")
     .pipe(
-      postcss([tailwindcss(paths.config.tailwind), require("autoprefixer")])
+      postcss([tailwindcss(paths.config.tailwind), require("autoprefixer"),require("postcss-import")])
     )
     .pipe(
       purgecss({
